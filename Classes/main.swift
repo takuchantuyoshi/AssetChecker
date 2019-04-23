@@ -130,6 +130,6 @@ unused.forEach { print("\(assetCatalogAbsolutePath):: warning: [Asset Unused] \(
 let broken = used.subtracting(assets)
 broken.forEach { print("\(assetCatalogAbsolutePath):: error: [Asset Missing] \($0)") }
 
-if broken.count > 0 {
+if !broken.isEmpty {
     exit(1)
 }
