@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/freshos/AssetChecker.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/sachadso'
   s.ios.deployment_target = '8.0'
-  s.source_files     = "Classes/*.swift"
+  s.source_files     = "Sources/AssetChecker/*.swift"
   s.preserve_paths = [ 'run' ]
 end
