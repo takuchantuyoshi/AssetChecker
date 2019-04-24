@@ -30,8 +30,6 @@ guard let assetCatalogAbsolutePath = assetCatalogPathOption else {
     exit(0)
 }
 
-print("Searching sources in \(sourcePath) for assets in \(assetCatalogAbsolutePath)")
-
 /* Put here the asset generating false positives, 
  For instance whne you build asset names at runtime
 let ignoredUnusedNames = [
@@ -91,7 +89,6 @@ func localizedStrings(inStringFile: String) -> [String] {
 
 func listUsedAssetLiterals() -> [String] {
     let enumerator = FileManager.default.enumerator(atPath: sourcePath)
-    print(sourcePath)
 
     #if swift(>=4.1)
         return elementsInEnumerator(enumerator)
